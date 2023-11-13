@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+.calculator {
+    width: 414px;
+    height: 782px;
+    margin:auto;
+    margin-top: 50px;
+    border-radius: 13px;
+    background: var(--grey-grey-6, #EAEBED);
+    display: grid;
+    /*grid-template-rows: 19% 1% 80%;*/
+    grid-template-rows: 7% 12% 1% 80%;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.50);
+    
+}
+
+.line {
+    background: var(--Gradient, linear-gradient(90deg, #A430FF 0%, #F318AD 49.74%, #FF2171 100%));
+}
+
+.display {
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-bottom: 7px;
+    /*padding-top: 7px;*/
+    color: var(--grey-grey-3, #2E3A48);
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -2.24px;
+}
+
+.tooltip_place{
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    padding-right: 24px;
+    padding-left: 24px;
+    /*padding-bottom: 14px;*/
+    padding-top: 14px;
+    color: var(--grey-grey-5, #828A93);
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -1.26px;
+}
+
+.buttons {
+    border-radius: 0px 0px 13px 13px;
+    background: var(--secondary2, #C9BAFF);
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    text-align: center;
+   }
+
+button {
+    width: 83px;
+    height: 83px;
+    margin:auto;
+    border-radius: 9px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.50);
+    background: var(--grey-grey-7-white, #FFF);
+    color: var(--grey-grey-3, #2E3A48);
+    border: none;
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.91px;
+    position: relative;
+}
+
+button:hover {
+	/*box-shadow: inset 0 0 0 4px  #937CE6;*/
+    border: 4px solid #937CE6;
+}
+
+
+
+.memory_saved:hover::after {
+    content: attr(data-title); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 20%; top: 30%; /* Положение подсказки */
+    z-index: 1; /* Отображаем подсказку поверх других элементов */
+    background: rgba(255,255,230,0.9); /* Полупрозрачный цвет фона */
+    font-family: Arial, sans-serif; /* Гарнитура шрифта */
+    font-size: 11px; /* Размер текста подсказки */
+    padding: 5px 10px; /* Поля */
+    border: 1px solid #333; /* Параметры рамки */
+   }
+
+/*button:active {
+    background: #FF2171;
+    color: var(--grey-grey-6, #EAEBED);
+}*/
+
+.backspace {
+    color: #937CE6;
+}
+
+.operator {
+    background: var(--Primary, #6344D4);
+    color: var(--grey-grey-6, #EAEBED);
+}
+
+.equals {
+    background: var(--Gradient, linear-gradient(90deg, #A430FF 0%, #F318AD 49.74%, #FF2171 100%));
+    color: var(--grey-grey-6, #EAEBED);
+}
